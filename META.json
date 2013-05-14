@@ -41,7 +41,7 @@
    "provides" : {
       "Uninets::Check::Modules::MongoDB" : {
          "file" : "lib/Uninets/Check/Modules/MongoDB.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       }
    },
    "release_status" : "stable",
@@ -53,5 +53,5 @@
          "url" : "https://github.com/uninets/Uninets-Check-Modules-MongoDB"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
