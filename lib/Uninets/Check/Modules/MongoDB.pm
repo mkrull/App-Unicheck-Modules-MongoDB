@@ -7,6 +7,7 @@ use Moo;
 use Getopt::Long qw(GetOptionsFromArray);
 use Try::Tiny;
 use MongoDB;
+use MongoDB::MongoClient;
 use JSON;
 
 =head1 NAME
@@ -15,26 +16,26 @@ Uninets::Check::Modules::MongoDB - Uninets::Check module to check mongodb server
 
 =head1 VERSION
 
-Version 0.01
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
 
 Uninets::Check::Modules::MongoDB can check mongod reachability.
 
-	# to show available information on parameters run
-	unicheck --info MongoDB
+    # to show available information on parameters run
+    unicheck --info MongoDB
 
 =cut
 
 sub run {
-	my ($self, $action, @params) = @_;
+    my ($self, $action, @params) = @_;
 
-	$self->$action(@params);
+    $self->$action(@params);
 }
 
 =head1 ACTIONS
@@ -43,69 +44,69 @@ sub run {
 
 Check if the server is reachable.
 
-	# check default localhost:27017
-	unicheck MongoDB reachable
+    # check default localhost:27017
+    unicheck MongoDB reachable
 
-	# check specific host:port
-	unicheck MongoDB reachable --host example.com --port 1234
+    # check specific host:port
+    unicheck MongoDB reachable --host example.com --port 1234
 
 =cut
 
 sub reachable {
-	my ($self, @params) = @_;
+    my ($self, @params) = @_;
 
-	my $host = 'localhost';
-	my $port = 27017;
-	my $format = 'num';
+    my $host = 'localhost';
+    my $port = 27017;
+    my $format = 'num';
 
-	GetOptionsFromArray([@params],
-		'port=i' => \$port,
-		'host=s' => \$host,
-		'format=s' => \$format,
-	);
+    GetOptionsFromArray([@params],
+        'port=i' => \$port,
+        'host=s' => \$host,
+        'format=s' => \$format,
+    );
 
-	my $retval;
-	try {
-		MongoDB::MongoClient->new(host => $host, port => $port);
-		$retval = $self->_return(1, 'Connection successful', $format);
-	} catch {
-		$retval = $self->_return(0, $_, $format);
-	};
+    my $retval;
+    try {
+        MongoDB::MongoClient->new(host => $host, port => $port);
+        $retval = $self->_return(1, 'Connection successful', $format);
+    } catch {
+        $retval = $self->_return(0, $_, $format);
+    };
 
-	$retval;
+    $retval;
 }
 
 sub _return {
-	my ($self, $status, $value, $format) = @_;
+    my ($self, $status, $value, $format) = @_;
 
-	return JSON->new->encode(
-		{
-			message => $value,
-			status  => $status,
-		}
-	) if $format eq 'json';
-	# default last in case some non supported format was given
-	return $status; # if $format eq 'num'
+    return JSON->new->encode(
+        {
+            message => $value,
+            status  => $status,
+        }
+    ) if $format eq 'json';
+    # default last in case some non supported format was given
+    return $status; # if $format eq 'num'
 }
 
 sub help {
-	{
-		description => 'Check mongoDB status',
-		actions => {
-			reachable => {
-				description => 'Check if mongodb server is reachable',
-				params => {
-					'--host'   => 'Default: localhost',
-					'--port'   => 'Default: 27017',
-					'--format' => 'Default: num'
-				},
-				formats => {
-					'num'  => 'Returns the status code',
-					'json' => 'Returns a JSON structure',
-				},
-			},
-		},
-	}
+    {
+        description => 'Check mongoDB status',
+        actions => {
+            reachable => {
+                description => 'Check if mongodb server is reachable',
+                params => {
+                    '--host'   => 'Default: localhost',
+                    '--port'   => 'Default: 27017',
+                    '--format' => 'Default: num'
+                },
+                formats => {
+                    'num'  => 'Returns the status code',
+                    'json' => 'Returns a JSON structure',
+                },
+            },
+        },
+    }
 }
 
 =head1 AUTHOR
@@ -147,6 +148,10 @@ L<http://cpanratings.perl.org/d/Uninets-Check-Modules-MongoDB>
 =item * Search CPAN
 
 L<http://search.cpan.org/dist/Uninets-Check-Modules-MongoDB/>
+
+=item * Github
+
+L<https://github.com/uninets/Uninets-Check-Modules-MongoDB/>
 
 =back
 

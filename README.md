@@ -1,6 +1,6 @@
 # NAME
 
-Uninets::Check::Modules::MongoDB - Uninets::Check module to check mongodb servers.
+Uninets::Check::Modules::MongoDB - Uninets::Check module to check mongodb servers.  [![Build Status](https://secure.travis-ci.org/uninets/Uninets-Check-Modules-MongoDB.png)](http://travis-ci.org/uninets/Uninets-Check-Modules-MongoDB)
 
 # VERSION
 
@@ -10,8 +10,8 @@ Version 0.01
 
 Uninets::Check::Modules::MongoDB can check mongod reachability.
 
-	# to show available information on parameters run
-	unicheck --info MongoDB
+    # to show available information on parameters run
+    unicheck --info MongoDB
 
 # ACTIONS
 
@@ -19,11 +19,11 @@ Uninets::Check::Modules::MongoDB can check mongod reachability.
 
 Check if the server is reachable.
 
-	# check default localhost:27017
-	unicheck MongoDB reachable
+    # check default localhost:27017
+    unicheck MongoDB reachable
 
-	# check specific host:port
-	unicheck MongoDB reachable --host example.com --port 1234
+    # check specific host:port
+    unicheck MongoDB reachable --host example.com --port 1234
 
 # AUTHOR
 
@@ -66,6 +66,10 @@ You can also look for information at:
 - Search CPAN
 
     [http://search.cpan.org/dist/Uninets-Check-Modules-MongoDB/](http://search.cpan.org/dist/Uninets-Check-Modules-MongoDB/)
+
+- Github
+
+    [https://github.com/uninets/Uninets-Check-Modules-MongoDB/](https://github.com/uninets/Uninets-Check-Modules-MongoDB/)
 
 
 
