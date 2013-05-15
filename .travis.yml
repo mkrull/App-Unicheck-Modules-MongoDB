@@ -7,6 +7,6 @@ perl:
 env:
     - "RELEASE_TESTING=1"
 install:
-    - "cpanm -n Test::CheckManifest Test::Pod Test::Pod::Coverage"
+    - "cpanm -n Test::Pod Test::Pod::Coverage"
     - "cpanm -n --installdeps ."
 
