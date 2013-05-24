@@ -50,7 +50,7 @@ TODO: {
     "placeholder date/time"       => qr(Date/time)
   );
 
-  module_boilerplate_ok('lib/Uninets/Check/Modules/MongoDB.pm');
+  module_boilerplate_ok('lib/App/Unicheck/Modules/MongoDB.pm');
 
 
 }

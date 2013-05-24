@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   Module::Build: 0
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.130880'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,7 +18,7 @@ no_index:
     - t
 provides:
   App::Unicheck::Modules::MongoDB:
-    file: lib/Uninets/Check/Modules/MongoDB.pm
+    file: lib/App/Unicheck/Modules/MongoDB.pm
     version: 0.03
 requires:
   JSON: 0
@@ -26,6 +26,6 @@ requires:
   Moo: 0
   perl: v5.10.1
 resources:
-  license: http://www.perlfoundation.org/artistic_license_2_0
+  license: http://opensource.org/licenses/artistic-license-2.0.php
   repository: https://github.com/uninets/App-Unicheck-Modules-MongoDB
 version: 0.03
