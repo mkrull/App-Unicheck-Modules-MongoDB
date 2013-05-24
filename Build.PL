@@ -5,7 +5,7 @@ use Module::Build;
 
 my $builder = Module::Build->new(
     module_name         => 'App::Unicheck::Modules::MongoDB',
-    license             => 'Artistic_2_0',
+    license             => 'artistic_2',
     dist_author         => q{Matthias Krull <<m.krull@uninets.eu>>},
     dist_version_from   => 'lib/Uninets/Check/Modules/MongoDB.pm',
     configure_requires => {
