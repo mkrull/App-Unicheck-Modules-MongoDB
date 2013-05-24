@@ -4,7 +4,7 @@ use warnings FATAL => 'all';
 use Module::Build;
 
 my $builder = Module::Build->new(
-    module_name         => 'Uninets::Check::Modules::MongoDB',
+    module_name         => 'App::Unicheck::Modules::MongoDB',
     license             => 'Artistic_2_0',
     dist_author         => q{Matthias Krull <<m.krull@uninets.eu>>},
     dist_version_from   => 'lib/Uninets/Check/Modules/MongoDB.pm',
@@ -20,7 +20,7 @@ my $builder = Module::Build->new(
         'MongoDB' => 0,
         'JSON' => 0,
     },
-    add_to_cleanup     => [ 'Uninets-Check-Modules-MongoDB-* Build _build MYMETA.*' ],
+    add_to_cleanup     => [ 'App-Unicheck-Modules-MongoDB-* Build _build MYMETA.*' ],
     create_makefile_pl => 'traditional',
 
     meta_add => {
@@ -29,7 +29,7 @@ my $builder = Module::Build->new(
     },
     meta_merge => {
         resources => {
-            repository => 'https://github.com/uninets/Uninets-Check-Modules-MongoDB',
+            repository => 'https://github.com/uninets/App-Unicheck-Modules-MongoDB',
         }
     }
 );

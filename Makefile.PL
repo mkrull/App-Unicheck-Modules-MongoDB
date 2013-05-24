@@ -3,7 +3,7 @@ require 5.010001;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-  'NAME' => 'Uninets::Check::Modules::MongoDB',
+  'NAME' => 'App::Unicheck::Modules::MongoDB',
   'VERSION_FROM' => 'lib/Uninets/Check/Modules/MongoDB.pm',
   'PREREQ_PM' => {
                    'JSON' => 0,

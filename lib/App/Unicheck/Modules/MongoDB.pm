@@ -1,4 +1,4 @@
-package Uninets::Check::Modules::MongoDB;
+package App::Unicheck::Modules::MongoDB;
 
 use 5.10.0;
 use strict;
@@ -12,7 +12,7 @@ use JSON;
 
 =head1 NAME
 
-Uninets::Check::Modules::MongoDB - Uninets::Check module to check mongodb servers.
+App::Unicheck::Modules::MongoDB - App::Unicheck module to check mongodb servers.
 
 =head1 VERSION
 
@@ -25,7 +25,7 @@ our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
-Uninets::Check::Modules::MongoDB can check mongod reachability.
+App::Unicheck::Modules::MongoDB can check mongod reachability.
 
     # to show available information on parameters run
     unicheck --info MongoDB
@@ -115,8 +115,8 @@ Matthias Krull, C<< <<m.krull at uninets.eu>> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-uninets-check-modules-mongodb at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Uninets-Check-Modules-MongoDB>.  I will be notified, and then you'll
+Please report any bugs or feature requests to C<bug-app-unicheck-modules-mongodb at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-Unicheck-Modules-MongoDB>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
 
@@ -126,7 +126,7 @@ automatically be notified of progress on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Uninets::Check::Modules::MongoDB
+    perldoc App::Unicheck::Modules::MongoDB
 
 
 You can also look for information at:
@@ -135,23 +135,23 @@ You can also look for information at:
 
 =item * RT: CPAN's request tracker (report bugs here)
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Uninets-Check-Modules-MongoDB>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-Unicheck-Modules-MongoDB>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
-L<http://annocpan.org/dist/Uninets-Check-Modules-MongoDB>
+L<http://annocpan.org/dist/App-Unicheck-Modules-MongoDB>
 
 =item * CPAN Ratings
 
-L<http://cpanratings.perl.org/d/Uninets-Check-Modules-MongoDB>
+L<http://cpanratings.perl.org/d/App-Unicheck-Modules-MongoDB>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/Uninets-Check-Modules-MongoDB/>
+L<http://search.cpan.org/dist/App-Unicheck-Modules-MongoDB/>
 
 =item * Github
 
-L<https://github.com/uninets/Uninets-Check-Modules-MongoDB/>
+L<https://github.com/uninets/App-Unicheck-Modules-MongoDB/>
 
 =back
 
@@ -202,4 +202,4 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of Uninets::Check::Modules::MongoDB
+1; # End of App::Unicheck::Modules::MongoDB

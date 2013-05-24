@@ -1,5 +1,5 @@
 {
-   "abstract" : "Uninets::Check module to check mongodb servers.",
+   "abstract" : "App::Unicheck module to check mongodb servers.",
    "author" : [
       "Matthias Krull <<m.krull@uninets.eu>>"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Uninets-Check-Modules-MongoDB",
+   "name" : "App-Unicheck-Modules-MongoDB",
    "no_index" : {
       "directory" : [
          "t"
@@ -39,7 +39,7 @@
       }
    },
    "provides" : {
-      "Uninets::Check::Modules::MongoDB" : {
+      "App::Unicheck::Modules::MongoDB" : {
          "file" : "lib/Uninets/Check/Modules/MongoDB.pm",
          "version" : "0.03"
       }
@@ -50,7 +50,7 @@
          "http://www.perlfoundation.org/artistic_license_2_0"
       ],
       "repository" : {
-         "url" : "https://github.com/uninets/Uninets-Check-Modules-MongoDB"
+         "url" : "https://github.com/uninets/App-Unicheck-Modules-MongoDB"
       }
    },
    "version" : "0.03"

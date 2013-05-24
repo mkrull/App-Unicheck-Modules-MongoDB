@@ -14,5 +14,5 @@ inc/
 nytprof.out
 pod2htm*.tmp
 pm_to_blib
-Uninets-Check-Modules-MongoDB-*
-Uninets-Check-Modules-MongoDB-*.tar.gz
+App-Unicheck-Modules-MongoDB-*
+App-Unicheck-Modules-MongoDB-*.tar.gz

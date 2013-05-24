@@ -7,7 +7,7 @@ use Test::More;
 plan tests => 1;
 
 BEGIN {
-    use_ok( 'Uninets::Check::Modules::MongoDB' ) || print "Bail out!\n";
+    use_ok( 'App::Unicheck::Modules::MongoDB' ) || print "Bail out!\n";
 }
 
-diag( "Testing Uninets::Check::Modules::MongoDB $Uninets::Check::Modules::MongoDB::VERSION, Perl $], $^X" );
+diag( "Testing App::Unicheck::Modules::MongoDB $App::Unicheck::Modules::MongoDB::VERSION, Perl $], $^X" );

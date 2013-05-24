@@ -1,5 +1,5 @@
 ---
-abstract: 'Uninets::Check module to check mongodb servers.'
+abstract: 'App::Unicheck module to check mongodb servers.'
 author:
   - 'Matthias Krull <<m.krull@uninets.eu>>'
 build_requires:
@@ -12,12 +12,12 @@ license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Uninets-Check-Modules-MongoDB
+name: App-Unicheck-Modules-MongoDB
 no_index:
   directory:
     - t
 provides:
-  Uninets::Check::Modules::MongoDB:
+  App::Unicheck::Modules::MongoDB:
     file: lib/Uninets/Check/Modules/MongoDB.pm
     version: 0.03
 requires:
@@ -27,5 +27,5 @@ requires:
   perl: v5.10.1
 resources:
   license: http://www.perlfoundation.org/artistic_license_2_0
-  repository: https://github.com/uninets/Uninets-Check-Modules-MongoDB
+  repository: https://github.com/uninets/App-Unicheck-Modules-MongoDB
 version: 0.03
