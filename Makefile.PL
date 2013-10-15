@@ -3,16 +3,16 @@ require 5.010001;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-  'PL_FILES' => {},
-  'INSTALLDIRS' => 'site',
   'NAME' => 'App::Unicheck::Modules::MongoDB',
-  'EXE_FILES' => [],
   'VERSION_FROM' => 'lib/App/Unicheck/Modules/MongoDB.pm',
   'PREREQ_PM' => {
-                   'Test::More' => 0,
-                   'Moo' => 0,
                    'JSON' => 0,
-                   'MongoDB' => 0
-                 }
+                   'MongoDB' => 0,
+                   'Moo' => 0,
+                   'Test::More' => 0
+                 },
+  'INSTALLDIRS' => 'site',
+  'EXE_FILES' => [],
+  'PL_FILES' => {}
 )
 ;
